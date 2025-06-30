@@ -1,0 +1,121 @@
+#realisations {
+  width: 100%;
+  box-sizing: border-box;
+}
+#realisations input[type=radio] {
+  display: none;
+}
+#realisations h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+#realisations h2 span {
+  color: #0B4552;
+  font-weight: 700;
+}
+#realisations #liste_btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: height 5s ease-in-out;
+}
+#realisations #liste_btn label {
+  border: 1px solid #0B4552;
+  border-radius: 20px;
+  padding: 10px 2.5rem;
+  width: 3rem;
+  text-align: center;
+  color: #0B4552;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+#realisations #liste_btn label:hover {
+  cursor: pointer;
+  background-color: #0B4552;
+  color: white;
+}
+#realisations #liste_btn input[type=radio]:checked + label {
+  background-color: #0B4552;
+  color: white;
+}
+#realisations #liste {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1rem;
+  gap: 3rem;
+}
+#realisations #liste #liste_web, #realisations #liste #liste_mobile, #realisations #liste #liste_autre {
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+#realisations #liste #liste_web > div, #realisations #liste #liste_mobile > div, #realisations #liste #liste_autre > div {
+  width: 300px;
+  min-height: 400px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px 2px rgba(172, 164, 164, 0.527);
+  position: relative;
+  animation-name: fade-in;
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-range: entry 0% cover 100%;
+  animation-timeline: view();
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#realisations #liste #liste_web > div:hover, #realisations #liste #liste_mobile > div:hover, #realisations #liste #liste_autre > div:hover {
+  top: -10px;
+  box-shadow: 5px 5px 10px rgba(172, 164, 164, 0.527);
+}
+#realisations #liste #liste_web > div > img, #realisations #liste #liste_mobile > div > img, #realisations #liste #liste_autre > div > img {
+  width: 100%;
+  height: 200px;
+}
+#realisations #liste #liste_web > div > div, #realisations #liste #liste_mobile > div > div, #realisations #liste #liste_autre > div > div {
+  padding: 1rem;
+}
+#realisations #liste #liste_web > div h3, #realisations #liste #liste_mobile > div h3, #realisations #liste #liste_autre > div h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #0B4552;
+}
+#realisations #liste #liste_web > div p, #realisations #liste #liste_mobile > div p, #realisations #liste #liste_autre > div p {
+  text-align: justify;
+  font-size: small;
+}
+#realisations #liste #liste_web > div a, #realisations #liste #liste_mobile > div a, #realisations #liste #liste_autre > div a {
+  text-decoration: none;
+  color: #0B4552;
+  position: relative;
+  right: -75%;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  width: fit-content;
+  border: 1px solid white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+#realisations #liste #liste_web > div a:hover, #realisations #liste #liste_mobile > div a:hover, #realisations #liste #liste_autre > div a:hover {
+  transition: all 0.5s ease-in-out;
+  border-color: #0B4552;
+}
+
+/*# sourceMappingURL=realisation.css.map */

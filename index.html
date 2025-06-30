@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="realisation.css">
+    <title>Realisations
+    </title>
+</head>
+
+<body>
+    <div id="realisations">
+        <h2>Nos <span>Réalisations</span></h2>
+        <div id="liste_btn">
+            <input type="radio" name="realisations" id="tous" checked>
+            <label for="tous">Tous</label>
+            <input type="radio" name="realisations" id="web">
+            <label for="web">Web</label>
+            <input type="radio" name="realisations" id="mobile">
+            <label for="mobile">Mobile</label>
+            <input type="radio" name="realisations" id="autres">
+            <label for="autres">Autres</label>
+            
+        </div>
+        
+
+        <div id="liste">
+            <div id="liste_web">
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div id="liste_mobile">
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div id="liste_autre">
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img.png" alt="">
+                    <div>
+                        <h3>Titre</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, alias voluptate nam eaque ipsum veritatis aut autem asperiores eum.</p>
+                    <a href="">Voir <img src="assets/fleche.jpeg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const radios = document.querySelectorAll('input[name="realisations"]');
+            const listeWeb = document.getElementById('liste_web');
+            const listeMobile = document.getElementById('liste_mobile');
+            const listeAutre = document.getElementById('liste_autre');
+
+            radios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (this.id === 'tous') {
+                        listeWeb.style.display = 'flex';
+                        listeMobile.style.display = 'flex';
+                        listeAutre.style.display = 'flex';
+                    } else if (this.id === 'web') {
+                        listeWeb.style.display = 'flex';
+                        listeMobile.style.display = 'none';
+                        listeAutre.style.display = 'none';
+                    } else if (this.id === 'mobile') {
+                        listeWeb.style.display = 'none';
+                        listeMobile.style.display = 'flex';
+                        listeAutre.style.display = 'none';
+                    } else if (this.id === 'autres') {
+                        listeWeb.style.display = 'none';
+                        listeMobile.style.display = 'none';
+                        listeAutre.style.display = 'flex';
+                    }
+                });
+            });
+
+            // Initial display
+            radios[0].dispatchEvent(new Event('change'));
+        });
+    </script>
+</body>
+
+</html>
